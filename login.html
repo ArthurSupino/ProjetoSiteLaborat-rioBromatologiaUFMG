@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Usuário - Laboratório de Bromatologia UFMG</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>bromatologia@farmacia.ufmg.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(31) 3409-XXXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Faculdade de Farmácia, UFMG - Belo Horizonte, MG</span>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    
+                    <!-- Botão de login/cadastro -->
+                    <div class="login-dropdown">
+                        <a href="#" class="login-toggle"><i class="fas fa-user"></i><span>Área do Usuário</span></a>
+                        <div class="dropdown-menu">
+                            <a href="login.html">Entrar</a>
+                            <a href="login.html#cadastro">Cadastrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/lab-banner.jpg" alt="Laboratório de Bromatologia UFMG">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="projetos.html">Projetos e Pesquisas</a></li>
+                        <li><a href="publicacoes.html">Publicações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-overlay"></div>
+        <div class="container">
+            <h1>Área do Usuário</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Login/Cadastro</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authentication Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-box">
+                    <div class="auth-tabs">
+                        <div class="auth-tab login-tab active" id="loginTab">Login</div>
+                        <div class="auth-tab register-tab" id="registerTab">Cadastro</div>
+                    </div>
+                    <div class="auth-content">
+                        <!-- Login Form -->
+                        <div class="tab-content login-content active" id="loginContent">
+                            <div class="form-heading">
+                                <h2>Bem-vindo de volta</h2>
+                                <p>Acesse sua conta para visualizar recursos exclusivos</p>
+                            </div>
+                            <form class="auth-form" id="loginForm">
+                                <div class="form-group">
+                                    <label for="loginEmail">Email</label>
+                                    <input type="email" id="loginEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Senha</label>
+                                    <input type="password" id="loginPassword" name="password" required>
+                                </div>
+                                <div class="remember-forgot">
+                                    <div class="remember-me">
+                                        <input type="checkbox" id="rememberMe" name="remember">
+                                        <label for="rememberMe">Lembrar-me</label>
+                                    </div>
+                                    <div class="forgot-password">
+                                        <a href="#">Esqueceu a senha?</a>
+                                    </div>
+                                </div>
+                                <button type="submit" class="auth-btn">Entrar</button>
+                            </form>
+                            <div class="social-login">
+                                <p>Ou entre com</p>
+                                <div class="social-buttons">
+                                    <a href="#" class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-btn google-btn"><i class="fab fa-google"></i></a>
+                                    <a href="#" class="social-btn linkedin-btn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="switch-form">
+                                <p>Não tem uma conta? <a href="#" class="switch-to-register">Cadastre-se</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Register Form -->
+                        <div class="tab-content register-content" id="registerContent">
+                            <div class="form-heading">
+                                <h2>Crie sua conta</h2>
+                                <p>Cadastre-se para acessar recursos exclusivos</p>
+                            </div>
+                            <form class="auth-form" id="registerForm">
+                                <div class="form-group">
+                                    <label for="registerName">Nome completo</label>
+                                    <input type="text" id="registerName" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerEmail">Email</label>
+                                    <input type="email" id="registerEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPassword">Senha</label>
+                                    <input type="password" id="registerPassword" name="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirme a senha</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                </div>
+                                <div class="remember-me" style="margin-bottom: 20px;">
+                                    <input type="checkbox" id="termsAgree" name="terms" required>
+                                    <label for="termsAgree">Concordo com os <a href="#">termos e condições</a></label>
+                                </div>
+                                <button type="submit" class="auth-btn">Cadastrar</button>
+                            </form>
+                            <div class="social-login">
+                                <p>Ou cadastre-se com</p>
+                                <div class="social-buttons">
+                                    <a href="#" class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-btn google-btn"><i class="fab fa-google"></i></a>
+                                    <a href="#" class="social-btn linkedin-btn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="switch-form">
+                                <p>Já tem uma conta? <a href="#" class="switch-to-login">Faça login</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="images/lab-banner.jpg" alt="Laboratório de Bromatologia UFMG">
+                        </div>
+                        <p>O Laboratório de Bromatologia da Faculdade de Farmácia da UFMG é referência em pesquisa e análises na área de ciência e tecnologia de alimentos.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Links Rápidos</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="projetos.html">Projetos e Pesquisas</a></li>
+                            <li><a href="publicacoes.html">Publicações</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Links Úteis</h3>
+                        <ul class="footer-links">
+                            <li><a href="https://www.ufmg.br" target="_blank">UFMG</a></li>
+                            <li><a href="https://www.farmacia.ufmg.br" target="_blank">Faculdade de Farmácia</a></li>
+                            <li><a href="#">Portal do Aluno</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Área Restrita</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Boletim Informativo</h3>
+                        <p>Inscreva-se para receber atualizações sobre nossas pesquisas e eventos.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu e-mail" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Laboratório de Bromatologia - Faculdade de Farmácia UFMG. Todos os direitos reservados.</p>
+                <p>Desenvolvido por: Arthur Magno, Icaro Cardoso e Pâmela Eduarda - COLTEC UFMG</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tabs de Login/Cadastro
+            const loginTab = document.getElementById('loginTab');
+            const registerTab = document.getElementById('registerTab');
+            const loginContent = document.getElementById('loginContent');
+            const registerContent = document.getElementById('registerContent');
+            const switchToRegister = document.querySelector('.switch-to-register');
+            const switchToLogin = document.querySelector('.switch-to-login');
+            
+            // Verificar se há um hash na URL para mostrar o formulário correto
+            if(window.location.hash === '#cadastro') {
+                loginTab.classList.remove('active');
+                registerTab.classList.add('active');
+                loginContent.classList.remove('active');
+                registerContent.classList.add('active');
+            }
+            
+            // Função para alternar entre os tabs
+            function switchTab(showLogin) {
+                if(showLogin) {
+                    loginTab.classList.add('active');
+                    registerTab.classList.remove('active');
+                    loginContent.classList.add('active');
+                    registerContent.classList.remove('active');
+                    history.replaceState(null, null, ' '); // Remove o hash da URL
+                } else {
+                    loginTab.classList.remove('active');
+                    registerTab.classList.add('active');
+                    loginContent.classList.remove('active');
+                    registerContent.classList.add('active');
+                    history.replaceState(null, null, '#cadastro'); // Adiciona o hash à URL
+                }
+            }
+            
+            // Event Listeners
+            loginTab.addEventListener('click', function() {
+                switchTab(true);
+            });
+            
+            registerTab.addEventListener('click', function() {
+                switchTab(false);
+            });
+            
+            switchToRegister.addEventListener('click', function(e) {
+                e.preventDefault();
+                switchTab(false);
+            });
+            
+            switchToLogin.addEventListener('click', function(e) {
+                e.preventDefault();
+                switchTab(true);
+            });
+            
+            // Validação do formulário de cadastro
+            const registerForm = document.getElementById('registerForm');
+            registerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const password = document.getElementById('registerPassword').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                
+                if(password !== confirmPassword) {
+                    alert('As senhas não coincidem.');
+                    return;
+                }
+                
+                // Aqui você adicionaria o código para enviar os dados do formulário
+                alert('Cadastro realizado com sucesso! Você receberá um e-mail de confirmação.');
+                registerForm.reset();
+                switchTab(true); // Voltar para o tab de login
+            });
+            
+            // Login form submission
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Aqui você adicionaria o código para autenticar o usuário
+                alert('Login realizado com sucesso!');
+                loginForm.reset();
+                // Redirecionar para a área de usuário ou página inicial
+                // window.location.href = 'index.html';
+            });
+        });
+    </script>
+    
+    <style>
+        /* Estilos para o dropdown de login */
+        .login-dropdown {
+            position: relative;
+            margin-left: 15px;
+        }
+        
+        .login-toggle {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            font-size: 14px;
+        }
+        
+        .login-toggle i {
+            margin-right: 5px;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--white);
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            z-index: 100;
+            padding: 8px 0;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .login-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--white);
+            transform: rotate(45deg);
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 8px 15px;
+            color: var(--dark-text);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: rgba(26, 135, 84, 0.1);
+            color: var(--primary-color);
+        }
+        
+        /* Estilos específicos para a página de login/cadastro */
+        .auth-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+            min-height: 600px;
+        }
+        
+        .auth-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .auth-box {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .auth-tabs {
+            display: flex;
+            background-color: var(--primary-color);
+        }
+        
+        .auth-tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .auth-tab:hover {
+            color: var(--white);
+        }
+        
+        .auth-tab.active {
+            color: var(--white);
+        }
+        
+        .auth-tab.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background-color: var(--white);
+        }
+        
+        .auth-content {
+            padding: 40px;
+        }
+        
+        .form-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-heading h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .form-heading p {
+            color: var(--gray);
+        }
+        
+        .auth-form {
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(26, 135, 84, 0.1);
+        }
+        
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+        
+        .remember-me input {
+            margin-right: 8px;
+        }
+        
+        .forgot-password a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .auth-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .auth-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .social-login {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .social-login p {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .social-login p:before,
+        .social-login p:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background-color: var(--border-color);
+        }
+        
+        .social-login p:before {
+            left: 0;
+        }
+        
+        .social-login p:after {
+            right: 0;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .facebook-btn {
+            background-color: #3b5998;
+        }
+        
+        .google-btn {
+            background-color: #db4437;
+        }
+        
+        .linkedin-btn {
+            background-color: #0077b5;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .switch-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .switch-form a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</body>
+</html>
