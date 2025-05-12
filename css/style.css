@@ -1,18 +1,66 @@
 /* Main Styles - Inspirado no template Laborex */
 
 :root {
-    --primary-color: #1a8754; /* Verde principal */
-    --primary-dark: #146c43;
-    --primary-light: #75c794;
-    --secondary-color: #f8f9fa;
-    --text-color: #444;
-    --heading-color: #222;
+    --primary-color: #4CAF50;       /* Verde mais vibrante e chamativo */
+    --primary-dark: #388E3C;        /* Versão mais escura */
+    --primary-light: #81C784;       /* Versão mais clara e suave */
+    --primary-very-light: #E8F5E9;  /* Fundo muito claro para áreas amplas */
+    
+    /* Cores complementares aprimoradas */
+    --accent-color: #FFC107;        /* Âmbar mais vivo para contraste */
+    --accent-dark: #FFA000;         /* Âmbar escuro */
+    --accent-light: #FFECB3;        /* Âmbar claro */
+    
+    /* Gradientes pré-definidos com transições suaves */
+    --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    --gradient-light: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+    --gradient-accent: linear-gradient(135deg, #FFC107 0%, #FFA000 100%);
+    
+    /* Cores neutras refinadas */
     --white: #ffffff;
-    --light-gray: #f5f5f5;
-    --gray: #888;
-    --border-color: #e0e0e0;
+    --off-white: #f9f9f7;           /* Branco levemente amarelado */
+    --light-gray: #f0f2eb;          /* Cinza com tom levemente esverdeado */
+    --gray: #757575;                /* Cinza médio mais neutro */
+    --dark-text: #333333;
+    --darker-text: #212121;
+    --border-color: #e0e3d8;        /* Borda com tom levemente esverdeado */
+    
+    /* Cores de feedback mais vibrantes */
+    --success: #4CAF50;             /* Verde de sucesso (mesma cor primária) */
+    --info: #2196F3;                /* Azul informativo mais vivo */
+    --warning: #FF9800;             /* Laranja de aviso mais chamativo */
+    --danger: #F44336;              /* Vermelho de perigo mais visível */
+    
+    /* Sombras personalizadas */
+    --shadow-sm: 0 2px 8px rgba(76, 175, 80, 0.1);
+    --shadow-md: 0 5px 15px rgba(76, 175, 80, 0.15);
+    --shadow-lg: 0 10px 30px rgba(76, 175, 80, 0.2);
+    
+    /* Transparências do primário */
+    --primary-10: rgba(76, 175, 80, 0.1);
+    --primary-20: rgba(76, 175, 80, 0.2);
+    --primary-30: rgba(76, 175, 80, 0.3);
+    
+    /* Espaçamentos consistentes */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-xxl: 3rem;
+    
+    /* Arredondamentos */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-round: 50%;
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
 }
-
 /* Common Styles */
 .container {
     max-width: 1200px;
@@ -74,6 +122,89 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* Estilos para as animações dos filtros no estado sticky */
+@keyframes pulseHighlight {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 8px rgba(76, 175, 80, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+.pulse-highlight {
+    animation: pulseHighlight 0.5s ease forwards;
+}
+
+/* Animação para quando um filtro é aplicado */
+@keyframes filterApplied {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.filter-applied {
+    background: linear-gradient(270deg, rgba(240, 245, 243, 0.97), rgba(225, 235, 230, 0.97), rgba(240, 245, 243, 0.97));
+    background-size: 200% 200%;
+    animation: filterApplied 0.5s ease;
+}
+
+/* Estilos para as tags de filtro */
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.filter-tag {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.2) 100%);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary-dark);
+    animation: fadeIn 0.3s ease;
+}
+
+.filter-tag .remove-tag {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(76, 175, 80, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.filter-tag .remove-tag:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Animação para os itens da publicação */
+.publication-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .section-header {
@@ -747,6 +878,11 @@ section {
     margin: 0 auto 50px;
 }
 
+.publications-list-wrapper {
+    position: relative;
+    min-height: 800px; /* Altura mínima para garantir espaço suficiente */
+}
+
 .publication-item {
     display: flex;
     align-items: flex-start;
@@ -798,6 +934,377 @@ section {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+/* Estilos para os filtros da página de publicações */
+.publications-filter {
+    position: sticky;
+    top: 80px;
+    z-index: 90;
+    padding: 20px 0;
+    background: linear-gradient(135deg, rgba(240, 245, 243, 0.97) 0%, rgba(225, 235, 230, 0.97) 100%);
+    border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+/* Classe para quando o filtro está em modo sticky */
+.publications-filter.sticky-active {
+    padding: 12px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation-name: stickySlideDown;
+}
+
+@keyframes stickySlideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Melhorar o espaçamento quando o filtro está ativo */
+.publications-filter.sticky-active .filter-container {
+    gap: 15px;
+}
+
+.publications-filter.sticky-active .filter-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Indicação visual quando o filtro está ativo */
+.publications-filter.sticky-active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-light), var(--primary-color));
+    animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
+
+/* Classe para quando o filtro deve parar antes do footer */
+.publications-filter.sticky-end {
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    left: 0;
+    z-index: 89;
+}
+
+/* Indicador visual para mostrar que está fixo */
+.publications-filter.sticky-active::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-light), var(--primary-color));
+    opacity: 0.8;
+}
+
+.publications-filter::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%231a8754" stroke-opacity="0.1" stroke-width="1"/></svg>');
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.filter-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-title i {
+    margin-right: 8px;
+    color: var(--primary-light);
+}
+
+.filter-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Container para os filtros e conteúdo das publicações */
+.publications-content-wrapper {
+    position: relative; /* Necessário para position:absolute funcionar corretamente */
+}
+
+.filter-group {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 1px solid rgba(26, 135, 84, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-group::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 25%, rgba(26, 135, 84, 0.05) 25%, rgba(26, 135, 84, 0.05) 50%, transparent 50%, transparent 75%, rgba(26, 135, 84, 0.05) 75%);
+    background-size: 8px 8px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.filter-group:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: rgba(26, 135, 84, 0.4);
+}
+
+.filter-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid rgba(26, 135, 84, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--dark-text);
+    font-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 135, 84, 0.2);
+}
+
+.select-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--primary-color);
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.filter-select:focus + .select-arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.btn-filter-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(26, 135, 84, 0.2);
+    flex: 1;
+}
+
+.btn-filter-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(26, 135, 84, 0.3);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+}
+
+.btn-filter-outline {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(240, 240, 240, 0.8) 100%);
+    color: var(--primary-color);
+    border: 1px solid rgba(26, 135, 84, 0.3);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 0.7;
+}
+
+.btn-filter-outline:hover {
+    background: linear-gradient(135deg, rgba(240, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
+    border-color: var(--primary-color);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.filter-tag {
+    background: linear-gradient(135deg, rgba(26, 135, 84, 0.1) 0%, rgba(26, 135, 84, 0.2) 100%);
+    border: 1px solid rgba(26, 135, 84, 0.2);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary-dark);
+    animation: fadeIn 0.3s ease;
+}
+
+.filter-tag .remove-tag {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(26, 135, 84, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.filter-tag .remove-tag:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Animações */
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(26, 135, 84, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(26, 135, 84, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(26, 135, 84, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-filter {
+    animation: slideInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Efeito de brilho */
+.filter-group::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shine 4s infinite linear;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.filter-group:hover::before {
+    opacity: 1;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(30deg) translateX(-200%);
+    }
+    100% {
+        transform: rotate(30deg) translateX(200%);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .filter-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-actions {
+        grid-column: 1 / -1;
+    }
 }
 
 /* Contact Section */

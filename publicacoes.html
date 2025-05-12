@@ -1,4 +1,3 @@
-.html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -74,49 +73,66 @@
         <div class="banner-overlay"></div>
         <div class="container">
             <h1>Publicações Científicas</h1>
-            <div class="breadcrumbs">
-                <a href="index.html">Home</a> / <span>Publicações</span>
-            </div>
         </div>
     </section>
 
     <!-- Publications Filter -->
     <section class="publications-filter">
         <div class="container">
+            <h3 class="filter-title"><i class="fas fa-filter"></i> Filtros de Busca</h3>
             <div class="filter-container">
-                <div class="filter-group">
-                    <label>Filtrar por ano:</label>
-                    <select id="year-filter">
-                        <option value="all">Todos os anos</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="older">Anteriores a 2020</option>
-                    </select>
+                <div class="filter-group animate-filter">
+                    <label for="year-filter">Filtrar por ano:</label>
+                    <div class="select-wrapper">
+                        <select id="year-filter" class="filter-select">
+                            <option value="all">Todos os anos</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="older">Anteriores a 2020</option>
+                        </select>
+                        <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
+                    </div>
                 </div>
-                <div class="filter-group">
-                    <label>Filtrar por categoria:</label>
-                    <select id="category-filter">
-                        <option value="all">Todas as categorias</option>
-                        <option value="articles">Artigos em periódicos</option>
-                        <option value="conferences">Trabalhos em congressos</option>
-                        <option value="books">Livros e capítulos</option>
-                        <option value="theses">Teses e dissertações</option>
-                    </select>
+                <div class="filter-group animate-filter" style="animation-delay: 0.1s;">
+                    <label for="category-filter">Filtrar por categoria:</label>
+                    <div class="select-wrapper">
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">Todas as categorias</option>
+                            <option value="articles">Artigos em periódicos</option>
+                            <option value="conferences">Trabalhos em congressos</option>
+                            <option value="books">Livros e capítulos</option>
+                            <option value="theses">Teses e dissertações</option>
+                        </select>
+                        <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
+                    </div>
                 </div>
-                <div class="filter-group">
-                    <label>Filtrar por autor:</label>
-                    <select id="author-filter">
-                        <option value="all">Todos os autores</option>
-                        <option value="silva">Profa. Dra. Ana Silva</option>
-                        <option value="oliveira">Prof. Dr. Carlos Oliveira</option>
-                        <option value="santos">Profa. Dra. Mariana Santos</option>
-                        <option value="almeida">Prof. Dr. Ricardo Almeida</option>
-                    </select>
+                <div class="filter-group animate-filter" style="animation-delay: 0.2s;">
+                    <label for="author-filter">Filtrar por autor:</label>
+                    <div class="select-wrapper">
+                        <select id="author-filter" class="filter-select">
+                            <option value="all">Todos os autores</option>
+                            <option value="silva">Profa. Dra. Ana Silva</option>
+                            <option value="oliveira">Prof. Dr. Carlos Oliveira</option>
+                            <option value="santos">Profa. Dra. Mariana Santos</option>
+                            <option value="almeida">Prof. Dr. Ricardo Almeida</option>
+                        </select>
+                        <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
+                    </div>
                 </div>
-                <button id="reset-filters" class="btn btn-outline">Limpar filtros</button>
+                <div class="filter-actions animate-filter" style="animation-delay: 0.3s;">
+                    <button id="apply-filters" class="btn btn-filter-primary">
+                        <i class="fas fa-search"></i> Aplicar
+                    </button>
+                    <button id="reset-filters" class="btn btn-filter-outline">
+                        <i class="fas fa-undo"></i> Limpar
+                    </button>
+                </div>
+            </div>
+            <div class="filter-tags" id="active-filters">
+                <!-- Tags de filtros ativos serão inseridas aqui via JavaScript -->
             </div>
         </div>
     </section>
@@ -430,427 +446,9 @@
             <div class="container">
                 <p>&copy; 2025 Laboratório de Bromatologia - Faculdade de Farmácia UFMG. Todos os direitos reservados.</p>
                 <p>Desenvolvido por: Arthur Magno, Icaro Cardoso e Pâmela Eduarda - COLTEC UFMG</p>
-            </div// filepath: c:\Users\Pâmela\DAW\ProjetoSiteLaborat-rioBromatologiaUFMG-1\publicacoes.html
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicações - Laboratório de Bromatologia UFMG</title>
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="top-contact">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>bromatologia@farmacia.ufmg.br</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>(31) 3409-XXXX</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Faculdade de Farmácia, UFMG - Belo Horizonte, MG</span>
-                    </div>
-                </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
             </div>
         </div>
-        <div class="main-header">
-            <div class="container">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/lab-banner.jpg" alt="Laboratório de Bromatologia UFMG">
-                    </a>
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre Nós</a></li>
-                        <li><a href="projetos.html">Projetos e Pesquisas</a></li>
-                        <li class="active"><a href="publicacoes.html">Publicações</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </nav>
-                <div class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Page Banner -->
-    <section class="page-banner">
-        <div class="banner-overlay"></div>
-        <div class="container">
-            <h1>Publicações Científicas</h1>
-            <div class="breadcrumbs">
-                <a href="index.html">Home</a> / <span>Publicações</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications Filter -->
-    <section class="publications-filter">
-        <div class="container">
-            <div class="filter-container">
-                <div class="filter-group">
-                    <label>Filtrar por ano:</label>
-                    <select id="year-filter">
-                        <option value="all">Todos os anos</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="older">Anteriores a 2020</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Filtrar por categoria:</label>
-                    <select id="category-filter">
-                        <option value="all">Todas as categorias</option>
-                        <option value="articles">Artigos em periódicos</option>
-                        <option value="conferences">Trabalhos em congressos</option>
-                        <option value="books">Livros e capítulos</option>
-                        <option value="theses">Teses e dissertações</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Filtrar por autor:</label>
-                    <select id="author-filter">
-                        <option value="all">Todos os autores</option>
-                        <option value="silva">Profa. Dra. Ana Silva</option>
-                        <option value="oliveira">Prof. Dr. Carlos Oliveira</option>
-                        <option value="santos">Profa. Dra. Mariana Santos</option>
-                        <option value="almeida">Prof. Dr. Ricardo Almeida</option>
-                    </select>
-                </div>
-                <button id="reset-filters" class="btn btn-outline">Limpar filtros</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications List -->
-    <section class="publications-list-section">
-        <div class="container">
-            <div class="publications-heading">
-                <h2>Artigos em Periódicos</h2>
-                <p>Publicações da equipe em revistas científicas nacionais e internacionais</p>
-            </div>
-            
-            <div class="publications-wrapper">
-                <!-- 2024 -->
-                <div class="publication-year">
-                    <h3>2024</h3>
-                    <div class="publication-items">
-                        <div class="publication-item">
-                            <div class="pub-info">
-                                <h4>Bioactive compounds in native Brazilian fruits: a comprehensive review</h4>
-                                <p class="authors">Silva, A. M., Santos, M. P., Oliveira, C. R.</p>
-                                <p class="journal">Food Research International, 157, 111-121.</p>
-                                <p class="abstract">This review summarizes the current knowledge about bioactive compounds present in Brazilian native fruits, highlighting their potential health benefits and applications in food science and technology.</p>
-                                <div class="pub-tags">
-                                    <span>Compostos bioativos</span>
-                                    <span>Frutas nativas</span>
-                                    <span>Antioxidantes</span>
-                                </div>
-                            </div>
-                            <div class="pub-links">
-                                <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> DOI</a>
-                            </div>
-                        </div>
-                        
-                        <div class="publication-item">
-                            <div class="pub-info">
-                                <h4>Development and validation of a HPLC method for determination of carotenoids in processed foods</h4>
-                                <p class="authors">Almeida, R. F., Oliveira, C. R., Silva, A. M.</p>
-                                <p class="journal">Journal of Food Composition and Analysis, 62, 78-86.</p>
-                                <p class="abstract">A high-performance liquid chromatography method was developed and validated for simultaneous determination of multiple carotenoids in processed food products, offering improved sensitivity and specificity compared to existing methods.</p>
-                                <div class="pub-tags">
-                                    <span>HPLC</span>
-                                    <span>Carotenoides</span>
-                                    <span>Validação de método</span>
-                                </div>
-                            </div>
-                            <div class="pub-links">
-                                <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> DOI</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 2023 -->
-                <div class="publication-year">
-                    <h3>2023</h3>
-                    <div class="publication-items">
-                        <div class="publication-item">
-                            <div class="pub-info">
-                                <h4>Phenolic profile and antioxidant capacity of pequi (Caryocar brasiliense) pulp and oil</h4>
-                                <p class="authors">Santos, M. P., Silva, A. M., Almeida, R. F.</p>
-                                <p class="journal">Food Chemistry, 325, 145-155.</p>
-                                <p class="abstract">This study characterized the phenolic compounds and evaluated the antioxidant capacity of pequi pulp and oil, a native fruit from Brazilian Cerrado with significant nutritional value and potential health benefits.</p>
-                                <div class="pub-tags">
-                                    <span>Pequi</span>
-                                    <span>Compostos fenólicos</span>
-                                    <span>Capacidade antioxidante</span>
-                                </div>
-                            </div>
-                            <div class="pub-links">
-                                <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> DOI</a>
-                            </div>
-                        </div>
-                        
-                        <div class="publication-item">
-                            <div class="pub-info">
-                                <h4>Impact of cooking methods on nutrient content of organic and conventional vegetables</h4>
-                                <p class="authors">Santos, M. P., Oliveira, C. R., Almeida, R. F.</p>
-                                <p class="journal">LWT - Food Science and Technology, 145, 211-220.</p>
-                                <p class="abstract">This research evaluated the effects of different cooking methods on nutrient retention in organic and conventional vegetables, providing insights for preserving nutritional value during food preparation.</p>
-                                <div class="pub-tags">
-                                    <span>Métodos de cocção</span>
-                                    <span>Vegetais orgânicos</span>
-                                    <span>Retenção de nutrientes</span>
-                                </div>
-                            </div>
-                            <div class="pub-links">
-                                <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> DOI</a>
-                            </div>
-                        </div>
-                        
-                        <div class="publication-item">
-                            <div class="pub-info">
-                                <h4>Authentication of honey samples using near-infrared spectroscopy and chemometrics</h4>
-                                <p class="authors">Oliveira, C. R., Almeida, R. F., Silva, A. M.</p>
-                                <p class="journal">Food Control, 112, 107-118.</p>
-                                <p class="abstract">A rapid and non-destructive method based on near-infrared spectroscopy and multivariate analysis was developed for authentication of honey samples and detection of adulterations in commercial products.</p>
-                                <div class="pub-tags">
-                                    <span>Mel</span>
-                                    <span>Espectroscopia NIR</span>
-                                    <span>Autenticidade</span>
-                                </div>
-                            </div>
-                            <div class="pub-links">
-                                <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> DOI</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 2022 -->
-                <div class="publication-year">
-                    <h3>2022</h3>
-                    <div class="publication-items">
-                        <div class="publication-item">
-                            <div class="pub-info">
-                                <h4>Nutritional composition and glycemic index of gluten-free breads developed with alternative flours</h4>
-                                <p class="authors">Silva, A. M., Santos, M. P., Oliveira, C. R.</p>
-                                <p class="journal">Food Chemistry, 310, 98-107.</p>
-                                <p class="abstract">This study evaluated the nutritional composition, sensory properties, and glycemic index of gluten-free breads formulated with different alternative flours, addressing the growing demand for special dietary products.</p>
-                                <div class="pub-tags">
-                                    <span>Pães sem glúten</span>
-                                    <span>Farinhas alternativas</span>
-                                    <span>Índice glicêmico</span>
-                                </div>
-                            </div>
-                            <div class="pub-links">
-                                <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> DOI</a>
-                            </div>
-                        </div>
-                        
-                        <div class="publication-item">
-                            <div class="pub-info">
-                                <h4>Occurrence of mycotoxins in cereal-based products marketed in Brazil</h4>
-                                <p class="authors">Almeida, R. F., Silva, A. M., Oliveira, C. R.</p>
-                                <p class="journal">Food Control, 98, 142-150.</p>
-                                <p class="abstract">This investigation assessed the occurrence and levels of multiple mycotoxins in cereal-based products commercialized in different regions of Brazil, highlighting potential health risks and regulatory compliance issues.</p>
-                                <div class="pub-tags">
-                                    <span>Micotoxinas</span>
-                                    <span>Cereais</span>
-                                    <span>Segurança alimentar</span>
-                                </div>
-                            </div>
-                            <div class="pub-links">
-                                <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> DOI</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Older Publications -->
-                <div class="load-more-container">
-                    <button id="load-more" class="btn btn-primary">Carregar mais publicações</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Theses and Dissertations -->
-    <section class="theses-section">
-        <div class="container">
-            <div class="publications-heading">
-                <h2>Teses e Dissertações</h2>
-                <p>Trabalhos acadêmicos desenvolvidos no laboratório</p>
-            </div>
-            
-            <div class="theses-list">
-                <div class="thesis-item">
-                    <div class="thesis-type">Tese de Doutorado</div>
-                    <h3>Desenvolvimento e aplicação de materiais biodegradáveis como embalagens ativas para alimentos</h3>
-                    <div class="thesis-meta">
-                        <div class="meta-item">
-                            <i class="fas fa-user-graduate"></i>
-                            <span>Autor: José Roberto Pereira</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-user"></i>
-                            <span>Orientador: Profa. Dra. Ana Silva</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>2023</span>
-                        </div>
-                    </div>
-                    <p class="thesis-abstract">Esta tese investigou o desenvolvimento de filmes biodegradáveis à base de amido e proteínas vegetais, incorporando compostos antimicrobianos naturais para aplicação como embalagens ativas para alimentos perecíveis. Os materiais desenvolvidos apresentaram propriedades mecânicas e de barreira adequadas, além de atividade antimicrobiana significativa contra patógenos alimentares.</p>
-                    <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> Download PDF</a>
-                </div>
-                
-                <div class="thesis-item">
-                    <div class="thesis-type">Dissertação de Mestrado</div>
-                    <h3>Avaliação da qualidade microbiológica e nutricional de queijos artesanais da Serra da Canastra</h3>
-                    <div class="thesis-meta">
-                        <div class="meta-item">
-                            <i class="fas fa-user-graduate"></i>
-                            <span>Autor: Carla Mendes Ferreira</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-user"></i>
-                            <span>Orientador: Prof. Dr. Carlos Oliveira</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>2023</span>
-                        </div>
-                    </div>
-                    <p class="thesis-abstract">Esta dissertação avaliou a qualidade microbiológica e nutricional de queijos artesanais produzidos na região da Serra da Canastra em Minas Gerais, caracterizando sua composição, perfil de ácidos graxos e presença de micro-organismos indicadores de qualidade higiênico-sanitária em diferentes períodos de maturação.</p>
-                    <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> Download PDF</a>
-                </div>
-                
-                <div class="thesis-item">
-                    <div class="thesis-type">Dissertação de Mestrado</div>
-                    <h3>Efeitos do processamento térmico sobre os compostos bioativos em sucos de frutas tropicais</h3>
-                    <div class="thesis-meta">
-                        <div class="meta-item">
-                            <i class="fas fa-user-graduate"></i>
-                            <span>Autor: Marcos Paulo Gonçalves</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-user"></i>
-                            <span>Orientador: Profa. Dra. Mariana Santos</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>2022</span>
-                        </div>
-                    </div>
-                    <p class="thesis-abstract">Este trabalho investigou os efeitos de diferentes tratamentos térmicos (pasteurização, esterilização UHT e micro-ondas) sobre os teores de vitamina C, compostos fenólicos e capacidade antioxidante em sucos de frutas tropicais brasileiras, identificando condições ideais para preservação de compostos bioativos.</p>
-                    <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> Download PDF</a>
-                </div>
-                
-                <div class="thesis-item">
-                    <div class="thesis-type">Tese de Doutorado</div>
-                    <h3>Desenvolvimento de método analítico multirresíduo para determinação de contaminantes emergentes em alimentos processados</h3>
-                    <div class="thesis-meta">
-                        <div class="meta-item">
-                            <i class="fas fa-user-graduate"></i>
-                            <span>Autor: Fernanda Costa Lima</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-user"></i>
-                            <span>Orientador: Prof. Dr. Ricardo Almeida</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>2021</span>
-                        </div>
-                    </div>
-                    <p class="thesis-abstract">Esta tese desenvolveu e validou um método analítico baseado em cromatografia líquida acoplada à espectrometria de massas para determinação simultânea de diversos contaminantes emergentes (ftalatos, bisfenóis, conservantes e outros compostos migratórios de embalagens) em alimentos processados comercializados no Brasil.</p>
-                    <a href="#" class="btn-link"><i class="fas fa-file-pdf"></i> Download PDF</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-widgets">
-                    <div class="footer-widget">
-                        <div class="footer-logo">
-                            <img src="images/lab-banner.jpg" alt="Laboratório de Bromatologia UFMG">
-                        </div>
-                        <p>O Laboratório de Bromatologia da Faculdade de Farmácia da UFMG é referência em pesquisa e análises na área de ciência e tecnologia de alimentos.</p>
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer-widget">
-                        <h3>Links Rápidos</h3>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Início</a></li>
-                            <li><a href="sobre.html">Sobre Nós</a></li>
-                            <li><a href="projetos.html">Projetos e Pesquisas</a></li>
-                            <li><a href="publicacoes.html">Publicações</a></li>
-                            <li><a href="contato.html">Contato</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-widget">
-                        <h3>Links Úteis</h3>
-                        <ul class="footer-links">
-                            <li><a href="https://www.ufmg.br" target="_blank">UFMG</a></li>
-                            <li><a href="https://www.farmacia.ufmg.br" target="_blank">Faculdade de Farmácia</a></li>
-                            <li><a href="#">Portal do Aluno</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Área Restrita</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-widget">
-                        <h3>Boletim Informativo</h3>
-                        <p>Inscreva-se para receber atualizações sobre nossas pesquisas e eventos.</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Seu e-mail" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2025 Laboratório de Bromatologia - Faculdade de Farmácia UFMG. Todos os direitos reservados.</p>
-                <p>Desenvolvido por: Arthur Magno, Icaro Cardoso e Pâmela Eduarda - COLTEC UFMG</p>
-            </div
+    </footer>
+    <script src="JS/main.js"></script>
+</body>
+</html>
