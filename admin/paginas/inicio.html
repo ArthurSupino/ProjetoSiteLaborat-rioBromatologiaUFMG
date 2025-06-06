@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Página Inicial - Laboratório de Bromatologia UFMG</title>
+    <link rel="stylesheet" href="../../CSS/reset.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <!-- Header com informações simplificadas -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="admin-logo">
+                <img src="../../images/lab-banner.jpg" alt="Laboratório de Bromatologia UFMG">
+            </div>
+            <div class="admin-user">
+                <div class="user-info">
+                    <img src="../../images/admin-avatar.jpg" alt="Admin" class="user-avatar">
+                    <div class="user-details">
+                        <h4>Administrador</h4>
+                        <p>admin@farmacialab.ufmg.br</p>
+                    </div>
+                </div>
+                <a href="../index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo principal com sidebar e conteúdo -->
+    <div class="admin-main">
+        <!-- Sidebar com menu de navegação -->
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="../index.html#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-file-alt"></i> Páginas</a>
+                        <ul class="submenu">
+                            <li class="active"><a href="#">Página Inicial</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="projetos.html">Projetos e Pesquisas</a></li>
+                            <li><a href="publicacoes.html">Publicações</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../equipe.html"><i class="fas fa-users"></i> Equipe</a>
+                    </li>
+                    <li>
+                        <a href="../projetos-admin.html"><i class="fas fa-flask"></i> Projetos</a>
+                    </li>
+                    <li>
+                        <a href="../publicacoes-admin.html"><i class="fas fa-book"></i> Publicações</a>
+                    </li>
+                    <li>
+                        <a href="../banners.html"><i class="fas fa-images"></i> Banners</a>
+                    </li>
+                    <li>
+                        <a href="../midia.html"><i class="fas fa-photo-video"></i> Biblioteca de Mídia</a>
+                    </li>
+                    <li>
+                        <a href="../configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="admin-content">
+            <!-- Aqui vai o conteúdo específico da edição da página inicial -->
+            <section id="pagina-inicio" class="admin-section active">
+                <div class="admin-section-header">
+                    <h2>Editar Página Inicial</h2>
+                    <p>Modifique o conteúdo da página principal do site</p>
+                </div>
+
+                <div class="admin-tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="hero">Banner Principal</button>
+                        <button class="tab-btn" data-tab="features">Recursos</button>
+                        <button class="tab-btn" data-tab="about">Sobre</button>
+                        <button class="tab-btn" data-tab="services">Serviços</button>
+                        <button class="tab-btn" data-tab="projects-home">Projetos</button>
+                    </div>
+                    
+                    <!-- Banner Principal -->
+                    <div class="tab-content active" id="hero-tab">
+                        <div class="form-group">
+                            <label>Imagem de Fundo</label>
+                            <div class="image-preview-container">
+                                <img src="../../images/lab-hero.jpg" alt="Banner atual" id="hero-preview" class="image-preview">
+                                <div class="image-actions">
+                                    <button class="btn btn-sm btn-outline"><i class="fas fa-upload"></i> Trocar Imagem</button>
+                                    <input type="file" id="hero-image" class="file-input" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hero-title">Título Principal</label>
+                            <input type="text" id="hero-title" value="Laboratório de Bromatologia" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="hero-subtitle">Subtítulo</label>
+                            <input type="text" id="hero-subtitle" value="Faculdade de Farmácia - UFMG" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="hero-description">Descrição</label>
+                            <textarea id="hero-description" class="form-textarea">Excelência em pesquisa e análises na área de ciência e tecnologia de alimentos, contribuindo com o desenvolvimento de produtos mais nutritivos e seguros.</textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="btn-primary-text">Texto do Botão Principal</label>
+                                <input type="text" id="btn-primary-text" value="Entre em Contato" class="form-input">
+                            </div>
+                            <div class="form-group half">
+                                <label for="btn-primary-link">Link do Botão Principal</label>
+                                <input type="text" id="btn-primary-link" value="contato.html" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="btn-secondary-text">Texto do Botão Secundário</label>
+                                <input type="text" id="btn-secondary-text" value="Conheça Nossos Projetos" class="form-input">
+                            </div>
+                            <div class="form-group half">
+                                <label for="btn-secondary-link">Link do Botão Secundário</label>
+                                <input type="text" id="btn-secondary-link" value="projetos.html" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Recursos/Features -->
+                    <div class="tab-content" id="features-tab">
+                        <!-- Conteúdo da seção de Recursos... (código existente) -->
+                    </div>
+
+                    <!-- Sobre -->
+                    <div class="tab-content" id="about-tab">
+                        <!-- Conteúdo da seção Sobre... (código existente) -->
+                    </div>
+
+                    <!-- Serviços -->
+                    <div class="tab-content" id="services-tab">
+                        <!-- Conteúdo da seção de Serviços... (código existente) -->
+                    </div>
+
+                    <!-- Projetos em Destaque -->
+                    <div class="tab-content" id="projects-home-tab">
+                        <!-- Conteúdo da seção de Projetos em Destaque... (código existente) -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../js/admin.js"></script>
+</body>
+</html>

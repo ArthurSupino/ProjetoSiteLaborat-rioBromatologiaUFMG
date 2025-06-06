@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Página Sobre Nós - Laboratório de Bromatologia UFMG</title>
+    <link rel="stylesheet" href="../../CSS/reset.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <!-- Header com informações simplificadas -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="admin-logo">
+                <img src="../../images/lab-banner.jpg" alt="Laboratório de Bromatologia UFMG">
+            </div>
+            <div class="admin-user">
+                <div class="user-info">
+                    <img src="../../images/admin-avatar.jpg" alt="Admin" class="user-avatar">
+                    <div class="user-details">
+                        <h4>Administrador</h4>
+                        <p>admin@farmacialab.ufmg.br</p>
+                    </div>
+                </div>
+                <a href="../index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo principal com sidebar e conteúdo -->
+    <div class="admin-main">
+        <!-- Sidebar com menu de navegação -->
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="../index.html#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-file-alt"></i> Páginas</a>
+                        <ul class="submenu">
+                            <li><a href="inicio.html">Página Inicial</a></li>
+                            <li class="active"><a href="#">Sobre Nós</a></li>
+                            <li><a href="projetos.html">Projetos e Pesquisas</a></li>
+                            <li><a href="publicacoes.html">Publicações</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../equipe.html"><i class="fas fa-users"></i> Equipe</a>
+                    </li>
+                    <li>
+                        <a href="../projetos-admin.html"><i class="fas fa-flask"></i> Projetos</a>
+                    </li>
+                    <li>
+                        <a href="../publicacoes-admin.html"><i class="fas fa-book"></i> Publicações</a>
+                    </li>
+                    <li>
+                        <a href="../banners.html"><i class="fas fa-images"></i> Banners</a>
+                    </li>
+                    <li>
+                        <a href="../midia.html"><i class="fas fa-photo-video"></i> Biblioteca de Mídia</a>
+                    </li>
+                    <li>
+                        <a href="../configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="admin-content">
+            <!-- Seção de edição da página Sobre Nós -->
+            <section id="pagina-sobre" class="admin-section active">
+                <div class="admin-section-header">
+                    <h2>Editar Página Sobre Nós</h2>
+                    <p>Personalize o conteúdo da página que apresenta o laboratório e sua equipe</p>
+                </div>
+
+                <div class="admin-tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="intro-sobre">Introdução</button>
+                        <button class="tab-btn" data-tab="historia">História</button>
+                        <button class="tab-btn" data-tab="missao-visao">Missão e Visão</button>
+                        <button class="tab-btn" data-tab="equipe">Equipe</button>
+                        <button class="tab-btn" data-tab="infraestrutura">Infraestrutura</button>
+                    </div>
+                    
+                    <!-- Introdução -->
+                    <div class="tab-content active" id="intro-sobre-tab">
+                        <h3 class="tab-section-title">Introdução da Página</h3>
+                        <p class="tab-section-description">Edite o conteúdo principal que aparece no topo da página Sobre Nós</p>
+                        
+                        <div class="form-group">
+                            <label for="about-page-title">Título Principal</label>
+                            <input type="text" id="about-page-title" value="Sobre o Laboratório de Bromatologia" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="about-page-subtitle">Subtítulo (opcional)</label>
+                            <input type="text" id="about-page-subtitle" value="Conheça nossa história, missão e equipe" class="form-input">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label>Imagem Principal</label>
+                                <div class="image-preview-container">
+                                    <img src="../../images/lab-team.jpg" alt="Imagem principal" id="about-page-preview" class="image-preview">
+                                    <div class="image-actions">
+                                        <button class="btn btn-sm btn-outline"><i class="fas fa-upload"></i> Trocar Imagem</button>
+                                        <input type="file" id="about-page-image" class="file-input" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group half">
+                                <label for="about-page-intro">Texto de Introdução</label>
+                                <textarea id="about-page-intro" class="form-textarea" style="height: 300px">O Laboratório de Bromatologia da Faculdade de Farmácia da UFMG é um centro de excelência em pesquisa e análises na área de ciência e tecnologia de alimentos. Fundado em 1998, o laboratório tem como foco principal o desenvolvimento de análises físico-químicas e microbiológicas, pesquisa aplicada e formação de recursos humanos qualificados.
+
+Nossa equipe é composta por professores, pesquisadores, pós-graduandos e alunos de iniciação científica, todos comprometidos com a qualidade e a inovação na área de alimentos.</textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- História -->
+                    <div class="tab-content" id="historia-tab">
+                        <h3 class="tab-section-title">História do Laboratório</h3>
+                        <p class="tab-section-description">Conte a trajetória e desenvolvimento do laboratório ao longo dos anos</p>
+                        
+                        <div class="form-group">
+                            <label for="historia-title">Título da Seção</label>
+                            <input type="text" id="historia-title" value="Nossa História" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="historia-content">Conteúdo</label>
+                            <textarea id="historia-content" class="form-textarea" style="height: 300px">O Laboratório de Bromatologia da Faculdade de Farmácia da UFMG foi estabelecido em 1998, com o objetivo inicial de dar suporte às atividades didáticas do curso de Farmácia na área de análise de alimentos.
+
+Ao longo dos anos, o laboratório expandiu suas atividades para incluir pesquisa científica, prestação de serviços à comunidade e parcerias com a indústria alimentícia. Em 2005, foi reconhecido como centro de referência em análises bromatológicas pelo Ministério da Agricultura.
+
+Em 2010, o laboratório passou por uma grande ampliação de sua infraestrutura, adquirindo equipamentos de última geração e aumentando sua capacidade analítica. Desde então, tem sido um importante polo de desenvolvimento de metodologias analíticas e pesquisas aplicadas na área de ciência e tecnologia de alimentos.
+
+Hoje, o Laboratório de Bromatologia da UFMG é reconhecido nacionalmente pela qualidade de suas análises e pesquisas, formando profissionais altamente qualificados e contribuindo para o avanço científico e tecnológico no setor alimentício.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Linha do Tempo</label>
+                            <p class="tab-section-description">Adicione marcos históricos importantes do laboratório</p>
+                            
+                            <!-- Marco 1 -->
+                            <div class="feature-block">
+                                <div class="feature-header">
+                                    <h4>Marco 1</h4>
+                                    <button type="button" class="btn btn-sm btn-outline feature-collapse-btn">
+                                        <i class="fas fa-chevron-up"></i>
+                                    </button>
+                                </div>
+                                <div class="feature-content">
+                                    <div class="form-group">
+                                        <label for="marco1-ano">Ano</label>
+                                        <input type="text" id="marco1-ano" value="1998" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="marco1-titulo">Título</label>
+                                        <input type="text" id="marco1-titulo" value="Fundação do Laboratório" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="marco1-descricao">Descrição</label>
+                                        <textarea id="marco1-descricao" class="form-textarea">Estabelecimento do Laboratório de Bromatologia com foco inicial em atividades didáticas para o curso de Farmácia.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Marco 2 -->
+                            <div class="feature-block">
+                                <div class="feature-header">
+                                    <h4>Marco 2</h4>
+                                    <button type="button" class="btn btn-sm btn-outline feature-collapse-btn">
+                                        <i class="fas fa-chevron-up"></i>
+                                    </button>
+                                </div>
+                                <div class="feature-content">
+                                    <div class="form-group">
+                                        <label for="marco2-ano">Ano</label>
+                                        <input type="text" id="marco2-ano" value="2005" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="marco2-titulo">Título</label>
+                                        <input type="text" id="marco2-titulo" value="Reconhecimento como Centro de Referência" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="marco2-descricao">Descrição</label>
+                                        <textarea id="marco2-descricao" class="form-textarea">O laboratório é reconhecido como centro de referência em análises bromatológicas pelo Ministério da Agricultura.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Marco 3 -->
+                            <div class="feature-block">
+                                <div class="feature-header">
+                                    <h4>Marco 3</h4>
+                                    <button type="button" class="btn btn-sm btn-outline feature-collapse-btn">
+                                        <i class="fas fa-chevron-up"></i>
+                                    </button>
+                                </div>
+                                <div class="feature-content">
+                                    <div class="form-group">
+                                        <label for="marco3-ano">Ano</label>
+                                        <input type="text" id="marco3-ano" value="2010" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="marco3-titulo">Título</label>
+                                        <input type="text" id="marco3-titulo" value="Ampliação da Infraestrutura" class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="marco3-descricao">Descrição</label>
+                                        <textarea id="marco3-descricao" class="form-textarea">Grande ampliação das instalações e aquisição de equipamentos de última geração, expandindo a capacidade analítica do laboratório.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="button" class="btn btn-outline">
+                                    <i class="fas fa-plus"></i> Adicionar Novo Marco
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Missão e Visão -->
+                    <div class="tab-content" id="missao-visao-tab">
+                        <h3 class="tab-section-title">Missão, Visão e Valores</h3>
+                        <p class="tab-section-description">Defina os princípios e objetivos fundamentais do laboratório</p>
+                        
+                        <div class="form-group">
+                            <label for="missao-title">Título da Seção</label>
+                            <input type="text" id="missao-title" value="Nossa Missão, Visão e Valores" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="missao-content">Missão</label>
+                            <textarea id="missao-content" class="form-textarea">Contribuir para o avanço científico e tecnológico na área de alimentos, formando profissionais capacitados e desenvolvendo pesquisas de impacto que beneficiem a sociedade, através da excelência em análises laboratoriais, inovação e transferência de conhecimento.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="visao-content">Visão</label>
+                            <textarea id="visao-content" class="form-textarea">Ser reconhecido nacional e internacionalmente como um centro de excelência em pesquisa, inovação e formação de recursos humanos na área de ciência e tecnologia de alimentos, tornando-se referência para a indústria alimentícia e a comunidade científica.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Valores</label>
+                            <p class="tab-section-description">Adicione os principais valores do laboratório</p>
+                            
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <input type="text" id="valor1" value="Excelência e Rigor Científico" class="form-input">
+                                </div>
+                                <div class="form-group half">
+                                    <input type="text" id="valor2" value="Ética e Responsabilidade" class="form-input">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <input type="text" id="valor3" value="Inovação e Criatividade" class="form-input">
+                                </div>
+                                <div class="form-group half">
+                                    <input type="text" id="valor4" value="Compromisso com a Qualidade" class="form-input">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <input type="text" id="valor5" value="Colaboração e Trabalho em Equipe" class="form-input">
+                                </div>
+                                <div class="form-group half">
+                                    <input type="text" id="valor6" value="Respeito à Diversidade" class="form-input">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Equipe -->
+                    <div class="tab-content" id="equipe-tab">
+                        <h3 class="tab-section-title">Equipe do Laboratório</h3>
+                        <p class="tab-section-description">Apresente os principais membros e colaboradores do laboratório</p>
+                        
+                        <div class="form-group">
+                            <label for="equipe-title">Título da Seção</label>
+                            <input type="text" id="equipe-title" value="Nossa Equipe" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="equipe-intro">Texto de Introdução</label>
+                            <textarea id="equipe-intro" class="form-textarea">Nossa equipe é formada por profissionais altamente qualificados, com formação multidisciplinar nas áreas de Farmácia, Química, Nutrição, Engenharia de Alimentos e Microbiologia. Contamos com professores doutores, pesquisadores de pós-doutorado, estudantes de doutorado, mestrado e iniciação científica, todos comprometidos com a excelência em pesquisa e desenvolvimento.</textarea>
+                        </div>
+                        
+                        <!-- Membro 1 -->
+                        <div class="feature-block">
+                            <div class="feature-header">
+                                <h4>Membro 1</h4>
+                                <button type="button" class="btn btn-sm btn-outline feature-collapse-btn">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                            </div>
+                            <div class="feature-content">
+                                <div class="form-row">
+                                    <div class="form-group half">
+                                        <label>Foto do Membro</label>
+                                        <div class="image-preview-container">
+                                            <img src="../../images/team-member1.jpg" alt="Membro da equipe" id="member1-preview" class="image-preview">
+                                            <div class="image-actions">
+                                                <button class="btn btn-sm btn-outline"><i class="fas fa-upload"></i> Trocar Imagem</button>
+                                                <input type="file" id="member1-image" class="file-input" accept="image/*">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group half">
+                                        <div class="form-group">
+                                            <label for="member1-name">Nome Completo</label>
+                                            <input type="text" id="member1-name" value="Dra. Maria Silva" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member1-position">Cargo/Função</label>
+                                            <input type="text" id="member1-position" value="Coordenadora do Laboratório" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member1-credentials">Titulação</label>
+                                            <input type="text" id="member1-credentials" value="Doutora em Ciência de Alimentos" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member1-bio">Biografia Resumida</label>
+                                            <textarea id="member1-bio" class="form-textarea">Professora Titular da Faculdade de Farmácia da UFMG, com mais de 20 anos de experiência em análises de alimentos. Coordena o laboratório desde 2010 e possui ampla experiência em desenvolvimento de metodologias analíticas. Autora de mais de 50 artigos científicos e orientadora de diversos trabalhos de mestrado e doutorado.</textarea>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member1-email">Email (opcional)</label>
+                                            <input type="text" id="member1-email" value="maria.silva@farmacia.ufmg.br" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member1-lattes">Link Currículo Lattes</label>
+                                            <input type="text" id="member1-lattes" value="http://lattes.cnpq.br/example" class="form-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Membro 2 -->
+                        <div class="feature-block">
+                            <div class="feature-header">
+                                <h4>Membro 2</h4>
+                                <button type="button" class="btn btn-sm btn-outline feature-collapse-btn">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                            </div>
+                            <div class="feature-content">
+                                <div class="form-row">
+                                    <div class="form-group half">
+                                        <label>Foto do Membro</label>
+                                        <div class="image-preview-container">
+                                            <img src="../../images/team-member2.jpg" alt="Membro da equipe" id="member2-preview" class="image-preview">
+                                            <div class="image-actions">
+                                                <button class="btn btn-sm btn-outline"><i class="fas fa-upload"></i> Trocar Imagem</button>
+                                                <input type="file" id="member2-image" class="file-input" accept="image/*">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group half">
+                                        <div class="form-group">
+                                            <label for="member2-name">Nome Completo</label>
+                                            <input type="text" id="member2-name" value="Dr. Carlos Oliveira" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member2-position">Cargo/Função</label>
+                                            <input type="text" id="member2-position" value="Pesquisador Sênior" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member2-credentials">Titulação</label>
+                                            <input type="text" id="member2-credentials" value="Doutor em Química Analítica" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member2-bio">Biografia Resumida</label>
+                                            <textarea id="member2-bio" class="form-textarea">Professor Associado da Faculdade de Farmácia, especialista em técnicas cromatográficas e espectrometria de massas. Coordena projetos de pesquisa em parceria com a indústria para o desenvolvimento de métodos analíticos avançados. Possui 15 anos de experiência na área de análise de alimentos.</textarea>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member2-email">Email (opcional)</label>
+                                            <input type="text" id="member2-email" value="carlos.oliveira@farmacia.ufmg.br" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="member2-lattes">Link Currículo Lattes</label>
+                                            <input type="text" id="member2-lattes" value="http://lattes.cnpq.br/example2" class="form-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="button" class="btn btn-outline">
+                                <i class="fas fa-plus"></i> Adicionar Novo Membro
+                            </button>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Infraestrutura -->
+                    <div class="tab-content" id="infraestrutura-tab">
+                        <h3 class="tab-section-title">Infraestrutura do Laboratório</h3>
+                        <p class="tab-section-description">Apresente as instalações, equipamentos e recursos disponíveis</p>
+                        
+                        <div class="form-group">
+                            <label for="infra-title">Título da Seção</label>
+                            <input type="text" id="infra-title" value="Nossa Infraestrutura" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="infra-intro">Texto de Introdução</label>
+                            <textarea id="infra-intro" class="form-textarea">O Laboratório de Bromatologia da UFMG conta com infraestrutura moderna e equipamentos de última geração para análises físico-químicas e microbiológicas, garantindo resultados precisos e confiáveis. Nossas instalações são divididas em áreas especializadas para diferentes tipos de análises, com rigoroso controle de qualidade e segurança.</textarea>
+                        </div>
+                        
+                        <!-- Área 1 -->
+                        <div class="feature-block">
+                            <div class="feature-header">
+                                <h4>Área/Equipamento 1</h4>
+                                <button type="button" class="btn btn-sm btn-outline feature-collapse-btn">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                            </div>
+                            <div class="feature-content">
+                                <div class="form-row">
+                                    <div class="form-group half">
+                                        <label>Imagem</label>
+                                        <div class="image-preview-container">
+                                            <img src="../../images/lab-area1.jpg" alt="Área do laboratório" id="area1-preview" class="image-preview">
+                                            <div class="image-actions">
+                                                <button class="btn btn-sm btn-outline"><i class="fas fa-upload"></i> Trocar Imagem</button>
+                                                <input type="file" id="area1-image" class="file-input" accept="image/*">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group half">
+                                        <div class="form-group">
+                                            <label for="area1-name">Nome da Área/Equipamento</label>
+                                            <input type="text" id="area1-name" value="Laboratório de Análises Cromatográficas" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="area1-description">Descrição</label>
+                                            <textarea id="area1-description" class="form-textarea">Equipado com cromatógrafos líquidos de alta eficiência (HPLC) com diversos detectores (UV-Vis, fluorescência, arranjo de diodos), cromatógrafo gasoso acoplado a espectrômetro de massas (GC-MS) e cromatógrafo líquido acoplado a espectrômetro de massas (LC-MS/MS), possibilitando análises precisas de diversos compostos em alimentos.</textarea>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="area1-capabilities">Principais Capacidades</label>
+                                            <textarea id="area1-capabilities" class="form-textarea">- Análise de compostos bioativos
+- Determinação de resíduos de pesticidas
+- Identificação e quantificação de aditivos alimentares
+- Análise de micotoxinas
+- Caracterização de compostos voláteis</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Área 2 -->
+                        <div class="feature-block">
+                            <div class="feature-header">
+                                <h4>Área/Equipamento 2</h4>
+                                <button type="button" class="btn btn-sm btn-outline feature-collapse-btn">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                            </div>
+                            <div class="feature-content">
+                                <div class="form-row">
+                                    <div class="form-group half">
+                                        <label>Imagem</label>
+                                        <div class="image-preview-container">
+                                            <img src="../../images/lab-area2.jpg" alt="Área do laboratório" id="area2-preview" class="image-preview">
+                                            <div class="image-actions">
+                                                <button class="btn btn-sm btn-outline"><i class="fas fa-upload"></i> Trocar Imagem</button>
+                                                <input type="file" id="area2-image" class="file-input" accept="image/*">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group half">
+                                        <div class="form-group">
+                                            <label for="area2-name">Nome da Área/Equipamento</label>
+                                            <input type="text" id="area2-name" value="Laboratório de Microbiologia de Alimentos" class="form-input">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="area2-description">Descrição</label>
+                                            <textarea id="area2-description" class="form-textarea">Laboratório especializado em análises microbiológicas de alimentos, com infraestrutura completa para isolamento, identificação e quantificação de micro-organismos. Conta com cabines de segurança biológica, estufas de incubação com diferentes temperaturas, autoclaves e equipamentos para análise molecular.</textarea>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="area2-capabilities">Principais Capacidades</label>
+                                            <textarea id="area2-capabilities" class="form-textarea">- Contagem de micro-organismos indicadores
+- Pesquisa de patógenos alimentares
+- Identificação de bactérias por métodos moleculares
+- Análise de qualidade microbiológica
+- Estudos de vida de prateleira microbiológica</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="button" class="btn btn-outline">
+                                <i class="fas fa-plus"></i> Adicionar Nova Área/Equipamento
+                            </button>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../js/admin.js"></script>
+</body>
+</html>
