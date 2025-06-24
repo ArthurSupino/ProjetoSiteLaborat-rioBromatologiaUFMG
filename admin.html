@@ -210,7 +210,503 @@
                         </div>
                     </div>
 
-                    <!-- Outros tabs para Features, Sobre, etc. seriam similares -->
+                    <!-- Recursos -->
+                    <div class="tab-content" id="features-tab">
+                        <div class="form-group">
+                            <label for="features-title">Título da Seção</label>
+                            <input type="text" id="features-title" value="Nossos Recursos" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="features-description">Descrição da Seção</label>
+                            <textarea id="features-description" class="form-textarea">Conheça os principais diferenciais e recursos do nosso laboratório.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Recursos</label>
+                            <div class="features-list">
+                                <!-- Recurso 1 -->
+                                <div class="feature-item">
+                                    <label>Ícone (Font Awesome)</label>
+                                    <input type="text" value="fa-microscope" class="form-input feature-icon">
+                                    <label>Título</label>
+                                    <input type="text" value="Equipamentos Modernos" class="form-input feature-title">
+                                    <label>Descrição</label>
+                                    <textarea class="form-textarea feature-desc">Laboratório equipado com tecnologia de ponta para análises precisas.</textarea>
+                                </div>
+                                <!-- Recurso 2 -->
+                                <div class="feature-item">
+                                    <label>Ícone (Font Awesome)</label>
+                                    <input type="text" value="fa-users" class="form-input feature-icon">
+                                    <label>Título</label>
+                                    <input type="text" value="Equipe Especializada" class="form-input feature-title">
+                                    <label>Descrição</label>
+                                    <textarea class="form-textarea feature-desc">Profissionais altamente qualificados em diversas áreas da bromatologia.</textarea>
+                                </div>
+                                <!-- Recurso 3 -->
+                                <div class="feature-item">
+                                    <label>Ícone (Font Awesome)</label>
+                                    <input type="text" value="fa-flask" class="form-input feature-icon">
+                                    <label>Título</label>
+                                    <input type="text" value="Pesquisa Inovadora" class="form-input feature-title">
+                                    <label>Descrição</label>
+                                    <textarea class="form-textarea feature-desc">Projetos de pesquisa que contribuem para o avanço científico.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Sobre -->
+                    <div class="tab-content" id="about-tab">
+                        <!-- Sobre o Laboratório -->
+                        <div class="form-group">
+                            <label for="about-main-title">Título Principal</label>
+                            <input type="text" id="about-main-title" value="Sobre o Laboratório" class="form-input">
+                        </div>
+                        <!-- História do Laboratório -->
+                        <div class="form-group">
+                            <label for="about-history-title">Título da História</label>
+                            <input type="text" id="about-history-title" value="História do Laboratório" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="about-history-subtitle">Subtítulo</label>
+                            <input type="text" id="about-history-subtitle" value="Nossa História" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="about-history-description">Descrição da História</label>
+                            <textarea id="about-history-description" class="form-textarea">O Laboratório de Bromatologia da Faculdade de Farmácia da UFMG foi fundado em 1978, com o objetivo de oferecer suporte analítico à pesquisa e ao ensino na área de ciências dos alimentos. Desde então, tem se consolidado como um importante centro de referência em análises e pesquisas bromatológicas.
+
+Inicialmente equipado com aparelhos básicos para análises físico-químicas, o laboratório cresceu gradualmente com investimentos em infraestrutura e equipamentos de última geração, expandindo sua capacidade analítica e as possibilidades de pesquisa na área de alimentos.
+
+Ao longo de mais de quatro décadas, o laboratório tem formado centenas de profissionais capacitados para a indústria de alimentos, órgãos reguladores e instituições de pesquisa, contribuindo significativamente para o desenvolvimento científico e tecnológico na área de alimentos no Brasil.</textarea>
+                        </div>
+                        <!-- Missão, Visão e Valores -->
+                        <div class="form-group">
+                            <label for="about-mvv-title">Título Missão, Visão e Valores</label>
+                            <input type="text" id="about-mvv-title" value="Missão, Visão e Valores" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="about-mvv-description">Descrição</label>
+                            <textarea id="about-mvv-description" class="form-textarea">Os princípios que orientam nosso trabalho</textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="about-mission-title">Missão</label>
+                                <input type="text" id="about-mission-title" value="Missão" class="form-input">
+                                <textarea id="about-mission-desc" class="form-textarea">Promover excelência em análises bromatológicas, formação acadêmica e pesquisa científica na área de alimentos, contribuindo para a segurança alimentar e o desenvolvimento de produtos mais nutritivos e saudáveis para a sociedade.</textarea>
+                            </div>
+                            <div class="form-group half">
+                                <label for="about-vision-title">Visão</label>
+                                <input type="text" id="about-vision-title" value="Visão" class="form-input">
+                                <textarea id="about-vision-desc" class="form-textarea">Ser reconhecido nacionalmente como laboratório de referência em análises bromatológicas e pesquisa na ciência e tecnologia de alimentos, formando profissionais altamente qualificados e gerando conhecimento inovador para o setor alimentício.</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="about-values-title">Valores</label>
+                            <input type="text" id="about-values-title" value="Valores" class="form-input">
+                            <textarea id="about-values-desc" class="form-textarea">Excelência científica e rigor metodológico
+Ética e transparência em todas as atividades
+Compromisso com a formação acadêmica
+Inovação e melhoria contínua
+Responsabilidade social e ambiental</textarea>
+                        </div>
+                        <!-- Infraestrutura -->
+                        <div class="form-group">
+                            <label for="about-infra-title">Título Infraestrutura</label>
+                            <input type="text" id="about-infra-title" value="Nossa Infraestrutura" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="about-infra-description">Descrição Infraestrutura</label>
+                            <textarea id="about-infra-description" class="form-textarea">Equipamentos e instalações de alto padrão para pesquisa e análises
+
+O Laboratório de Bromatologia conta com instalações modernas e equipamentos de última geração para análises químicas, físicas e microbiológicas de alimentos, oferecendo condições ideais para pesquisa, ensino e prestação de serviços.</textarea>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <label>Equipamento</label>
+                                <input type="text" value="Cromatógrafos" class="form-input">
+                                <label>Descrição</label>
+                                <textarea class="form-textarea">Equipamentos avançados para separação, identificação e quantificação de componentes em misturas complexas.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Equipamento</label>
+                                <input type="text" value="Espectrofotômetros" class="form-input">
+                                <label>Descrição</label>
+                                <textarea class="form-textarea">Para análise qualitativa e quantitativa de amostras através da absorção de luz em comprimentos de onda específicos.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Equipamento</label>
+                                <input type="text" value="Analisadores de Textura" class="form-input">
+                                <label>Descrição</label>
+                                <textarea class="form-textarea">Para avaliação das propriedades mecânicas e físicas dos alimentos.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Equipamento</label>
+                                <input type="text" value="Câmaras Climáticas" class="form-input">
+                                <label>Descrição</label>
+                                <textarea class="form-textarea">Para estudos de estabilidade e vida de prateleira de alimentos sob condições controladas.</textarea>
+                            </div>
+                        </div>
+                        <!-- Equipe -->
+                        <div class="form-group">
+                            <label for="about-team-title">Título Equipe</label>
+                            <input type="text" id="about-team-title" value="Nossa Equipe" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="about-team-description">Descrição Equipe</label>
+                            <textarea id="about-team-description" class="form-textarea">Conheça os professores e pesquisadores do laboratório</textarea>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Profa. Dra. Ana Silva" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Coordenadora do Laboratório" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Doutorado em Ciência dos Alimentos pela USP. Especialista em compostos bioativos e propriedades funcionais de alimentos.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Prof. Dr. Carlos Oliveira" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Pesquisador Sênior" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Doutorado em Ciência e Tecnologia de Alimentos pela UNICAMP. Especialista em análise sensorial e desenvolvimento de novos produtos.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Profa. Dra. Mariana Santos" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Pesquisadora" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Doutorado em Nutrição pela UFRJ. Especialista em micronutrientes e composição nutricional de alimentos regionais.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Prof. Dr. Ricardo Almeida" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Pesquisador" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Doutorado em Química de Alimentos pela UFMG. Especialista em técnicas analíticas avançadas e contaminantes em alimentos.</textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Serviços -->
+                    <div class="tab-content" id="services-tab">
+                        <div class="form-group">
+                            <label for="services-title">Título da Seção</label>
+                            <input type="text" id="services-title" value="Nossos Serviços" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="services-description">Descrição</label>
+                            <textarea id="services-description" class="form-textarea">Conheça os principais serviços oferecidos pelo Laboratório de Bromatologia</textarea>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <label>Título</label>
+                                <input type="text" value="Análise Centesimal" class="form-input">
+                                <label>Descrição</label>
+                                <textarea class="form-textarea">Determinação dos principais componentes dos alimentos: umidade, cinzas, proteínas, lipídeos e carboidratos.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Título</label>
+                                <input type="text" value="Análise Sensorial" class="form-input">
+                                <label>Descrição</label>
+                                <textarea class="form-textarea">Avaliação das características organolépticas dos alimentos utilizando metodologias padronizadas e painéis treinados.</textarea>
+                            </div>
+                            <div class="feature-item">
+                                <label>Título</label>
+                                <input type="text" value="Análise de Nutrientes" class="form-input">
+                                <label>Descrição</label>
+                                <textarea class="form-textarea">Quantificação de vitaminas, minerais e compostos bioativos presentes em alimentos e matérias-primas.</textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Projetos -->
+                    <div class="tab-content" id="projects-home-tab">
+                        <!-- Projetos e Pesquisas -->
+                        <div class="form-group">
+                            <label for="projects-main-title">Título Principal</label>
+                            <input type="text" id="projects-main-title" value="Projetos e Pesquisas" class="form-input">
+                        </div>
+                        <!-- Projetos em Andamento -->
+                        <div class="form-group">
+                            <label for="projects-ongoing-title">Título Projetos em Andamento</label>
+                            <input type="text" id="projects-ongoing-title" value="Projetos em Andamento" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="projects-ongoing-desc">Descrição Projetos em Andamento</label>
+                            <textarea id="projects-ongoing-desc" class="form-textarea">Pesquisas e iniciativas científicas atualmente desenvolvidas no laboratório</textarea>
+                        </div>
+                        <div class="features-list">
+                            <!-- Projeto 1 -->
+                            <div class="feature-item">
+                                <label>Título do Projeto</label>
+                                <input type="text" value="Alimentos Funcionais" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Desenvolvimento de produtos à base de frutas nativas com propriedades antioxidantes</textarea>
+                                <label>Coordenação</label>
+                                <input type="text" value="Profa. Dra. Ana Silva" class="form-input">
+                                <label>Período</label>
+                                <input type="text" value="2023-2025" class="form-input">
+                                <label>Financiamento</label>
+                                <input type="text" value="CNPq" class="form-input">
+                                <label>Descrição Detalhada</label>
+                                <textarea class="form-textarea">Este projeto tem como objetivo caracterizar frutas nativas do cerrado brasileiro quanto ao seu conteúdo de compostos bioativos e desenvolver produtos alimentícios com propriedades funcionais aproveitando essas matérias-primas. A pesquisa envolve análises fitoquímicas, avaliação da capacidade antioxidante e desenvolvimento de formulações inovadoras para aplicação na indústria de alimentos.</textarea>
+                            </div>
+                            <!-- Projeto 2 -->
+                            <div class="feature-item">
+                                <label>Título do Projeto</label>
+                                <input type="text" value="Segurança Alimentar" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Avaliação de contaminantes em alimentos processados comercializados em Belo Horizonte</textarea>
+                                <label>Coordenação</label>
+                                <input type="text" value="Prof. Dr. Ricardo Almeida" class="form-input">
+                                <label>Período</label>
+                                <input type="text" value="2024-2026" class="form-input">
+                                <label>Financiamento</label>
+                                <input type="text" value="FAPEMIG" class="form-input">
+                                <label>Descrição Detalhada</label>
+                                <textarea class="form-textarea">O projeto visa avaliar a presença de contaminantes químicos (micotoxinas, metais pesados e resíduos de pesticidas) em alimentos processados comercializados na região metropolitana de Belo Horizonte. A pesquisa envolve coleta sistemática de amostras, análises laboratoriais utilizando métodos validados e avaliação do risco à saúde dos consumidores com base nos resultados obtidos.</textarea>
+                            </div>
+                            <!-- Projeto 3 -->
+                            <div class="feature-item">
+                                <label>Título do Projeto</label>
+                                <input type="text" value="Nutrição" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Impacto do processamento sobre o valor nutricional de hortaliças convencionais e orgânicas</textarea>
+                                <label>Coordenação</label>
+                                <input type="text" value="Profa. Dra. Mariana Santos" class="form-input">
+                                <label>Período</label>
+                                <input type="text" value="2023-2025" class="form-input">
+                                <label>Financiamento</label>
+                                <input type="text" value="CAPES" class="form-input">
+                                <label>Descrição Detalhada</label>
+                                <textarea class="form-textarea">Esta pesquisa compara o conteúdo de nutrientes e compostos bioativos em hortaliças produzidas pelos sistemas convencional e orgânico, avaliando também as perdas nutricionais após diferentes métodos de processamento e cocção. O estudo visa contribuir para recomendações mais precisas sobre métodos de preparo que preservem o maior valor nutricional dos alimentos.</textarea>
+                            </div>
+                        </div>
+                        <!-- Projetos Concluídos -->
+                        <div class="form-group">
+                            <label for="projects-finished-title">Título Projetos Concluídos</label>
+                            <input type="text" id="projects-finished-title" value="Projetos Concluídos" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="projects-finished-desc">Descrição Projetos Concluídos</label>
+                            <textarea id="projects-finished-desc" class="form-textarea">Pesquisas finalizadas e seus principais resultados</textarea>
+                        </div>
+                        <div class="features-list">
+                            <!-- Projeto Concluído 1 -->
+                            <div class="feature-item">
+                                <label>Período</label>
+                                <input type="text" value="2020-2023" class="form-input">
+                                <label>Título</label>
+                                <input type="text" value="Desenvolvimento de método analítico para identificação de adulteração em mel" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Pesquisa que resultou no desenvolvimento de um método rápido e eficiente para detecção de adulteração em méis comercializados em Minas Gerais, utilizando técnicas espectroscópicas combinadas com análise multivariada.</textarea>
+                                <label>Coordenador</label>
+                                <input type="text" value="Prof. Dr. Carlos Oliveira" class="form-input">
+                                <label>Principais Resultados</label>
+                                <textarea class="form-textarea">Método validado com 95% de eficácia na detecção de adulterações
+2 artigos publicados em periódicos internacionais
+1 patente depositada</textarea>
+                            </div>
+                            <!-- Projeto Concluído 2 -->
+                            <div class="feature-item">
+                                <label>Período</label>
+                                <input type="text" value="2019-2022" class="form-input">
+                                <label>Título</label>
+                                <input type="text" value="Análise do perfil nutricional de alimentos ultraprocessados direcionados ao público infantil" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Estudo sobre a composição nutricional e ingredientes de alimentos ultraprocessados voltados para crianças, com foco na adequação à legislação vigente e avaliação crítica da rotulagem nutricional.</textarea>
+                                <label>Coordenador</label>
+                                <input type="text" value="Profa. Dra. Mariana Santos" class="form-input">
+                                <label>Principais Resultados</label>
+                                <textarea class="form-textarea">Mapeamento de 250 produtos do mercado nacional
+Identificação de desconformidades em 35% dos produtos analisados
+Contribuição para novas políticas de rotulagem nutricional</textarea>
+                            </div>
+                            <!-- Projeto Concluído 3 -->
+                            <div class="feature-item">
+                                <label>Período</label>
+                                <input type="text" value="2018-2021" class="form-input">
+                                <label>Título</label>
+                                <input type="text" value="Avaliação da estabilidade de compostos fenólicos em óleos vegetais" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Investigação sobre a estabilidade oxidativa de diferentes óleos vegetais e a influência de compostos fenólicos naturais na preservação de suas propriedades durante o armazenamento e processamento térmico.</textarea>
+                                <label>Coordenador</label>
+                                <input type="text" value="Prof. Dr. Ricardo Almeida" class="form-input">
+                                <label>Principais Resultados</label>
+                                <textarea class="form-textarea">Identificação dos fatores críticos para estabilidade dos óleos
+Desenvolvimento de método para monitoramento da degradação
+Recomendações para a indústria alimentícia</textarea>
+                            </div>
+                            <!-- Projeto Concluído 4 -->
+                            <div class="feature-item">
+                                <label>Período</label>
+                                <input type="text" value="2017-2020" class="form-input">
+                                <label>Título</label>
+                                <input type="text" value="Caracterização de produtos lácteos fermentados com probióticos de cepas regionais" class="form-input">
+                                <label>Resumo</label>
+                                <textarea class="form-textarea">Pesquisa que isolou e caracterizou bactérias probióticas de produtos lácteos artesanais de Minas Gerais, avaliando seu potencial para aplicação industrial na produção de alimentos funcionais.</textarea>
+                                <label>Coordenador</label>
+                                <input type="text" value="Profa. Dra. Ana Silva" class="form-input">
+                                <label>Principais Resultados</label>
+                                <textarea class="form-textarea">Isolamento de 3 novas cepas com potencial probiótico
+Desenvolvimento de iogurte experimental com cepas regionais
+Parceria com indústria local para escalonamento</textarea>
+                            </div>
+                        </div>
+                        <!-- Parcerias -->
+                        <div class="form-group">
+                            <label for="projects-partners-title">Título Parcerias</label>
+                            <input type="text" id="projects-partners-title" value="Nossas Parcerias" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="projects-partners-desc">Descrição Parcerias</label>
+                            <textarea id="projects-partners-desc" class="form-textarea">Instituições e empresas com as quais colaboramos em projetos de pesquisa</textarea>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <label>Parceiro</label>
+                                <input type="text" value="Parceiro 1" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Parceiro</label>
+                                <input type="text" value="Parceiro 2" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Parceiro</label>
+                                <input type="text" value="Parceiro 3" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Parceiro</label>
+                                <input type="text" value="Parceiro 4" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Parceiro</label>
+                                <input type="text" value="Parceiro 5" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Parceiro</label>
+                                <input type="text" value="Parceiro 6" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="projects-contact-desc">Chamada para Parcerias</label>
+                            <textarea id="projects-contact-desc" class="form-textarea">Interessado em estabelecer uma parceria?
+Nosso laboratório está sempre aberto a novas colaborações com instituições e empresas interessadas em projetos de pesquisa, desenvolvimento de produtos ou análises específicas na área de alimentos.
+
+Entre em contato</textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Equipe -->
+                    <div class="tab-content" id="equipe-tab">
+                        <div class="form-group">
+                            <label for="equipe-title">Título da Seção</label>
+                            <input type="text" id="equipe-title" value="Nossa Equipe" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="equipe-description">Descrição</label>
+                            <textarea id="equipe-description" class="form-textarea">Conheça os professores e pesquisadores do Laboratório de Bromatologia</textarea>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Profa. Dra. Ana Silva" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Coordenadora do Laboratório" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Prof. Dr. Carlos Oliveira" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Vice-Coordenador" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Profa. Dra. Mariana Santos" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Coord. de Parcerias" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Nome</label>
+                                <input type="text" value="Prof. Dr. Ricardo Almeida" class="form-input">
+                                <label>Cargo</label>
+                                <input type="text" value="Coord. de Pesquisa" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Publicações -->
+                    <div class="tab-content" id="publicacoes-tab">
+                        <div class="form-group">
+                            <label for="publicacoes-title">Título da Seção</label>
+                            <input type="text" id="publicacoes-title" value="Publicações Recentes" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="publicacoes-description">Descrição</label>
+                            <textarea id="publicacoes-description" class="form-textarea">Conheça nossas mais recentes contribuições científicas</textarea>
+                        </div>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <label>Ano</label>
+                                <input type="text" value="2025" class="form-input">
+                                <label>Título</label>
+                                <input type="text" value="Análise de compostos bioativos em frutas do cerrado brasileiro e sua aplicação em alimentos funcionais" class="form-input">
+                                <label>Autores</label>
+                                <input type="text" value="Silva, A.; Oliveira, C.; Santos, M.; Almeida, R." class="form-input">
+                                <label>Revista</label>
+                                <input type="text" value="Journal of Food Science and Technology, v.62, p.123-135" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Ano</label>
+                                <input type="text" value="2024" class="form-input">
+                                <label>Título</label>
+                                <input type="text" value="Desenvolvimento de método analítico para detecção de contaminantes emergentes em produtos lácteos" class="form-input">
+                                <label>Autores</label>
+                                <input type="text" value="Almeida, R.; Ferreira, J.; Silva, A." class="form-input">
+                                <label>Revista</label>
+                                <input type="text" value="Food Analytical Methods, v.17, p.89-101" class="form-input">
+                            </div>
+                            <div class="feature-item">
+                                <label>Ano</label>
+                                <input type="text" value="2024" class="form-input">
+                                <label>Título</label>
+                                <input type="text" value="Avaliação sensorial e nutricional de produtos elaborados com aproveitamento integral de frutas e hortaliças" class="form-input">
+                                <label>Autores</label>
+                                <input type="text" value="Santos, M.; Silva, A.; Oliveira, C." class="form-input">
+                                <label>Revista</label>
+                                <input type="text" value="Food Research International, v.159, p.245-257" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Outros tabs para Serviços, Projetos, etc. seriam similares -->
                 </div>
             </section>
 
