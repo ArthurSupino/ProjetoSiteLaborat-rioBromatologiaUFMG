@@ -1,8 +1,8 @@
 /* Main Styles - Inspirado no template Laborex */
 
 :root {
-    --primary-color: #4CAF50;       /* Verde mais vibrante e chamativo */
-    --primary-dark: #388E3C;        /* Versão mais escura */
+    --primary-color: #1a8754;
+    --primary-dark: #15643e;
     --primary-light: #81C784;       /* Versão mais clara e suave */
     --primary-very-light: #E8F5E9;  /* Fundo muito claro para áreas amplas */
     
@@ -1740,8 +1740,6 @@ section {
         padding: 40px 25px;
     }
 }
-
-/* Adicionar ao seu CSS existente */
 
 /* Corrija os caminhos das imagens */
 .page-banner {
