@@ -1,11 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicações - Laboratório de Bromatologia UFMG</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
@@ -71,66 +74,49 @@
         <div class="banner-overlay"></div>
         <div class="container">
             <h1>Publicações Científicas</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Publicações</span>
+            </div>
         </div>
     </section>
 
     <!-- Publications Filter -->
     <section class="publications-filter">
         <div class="container">
-            <h3 class="filter-title"><i class="fas fa-filter"></i> Filtros de Busca</h3>
             <div class="filter-container">
-                <div class="filter-group animate-filter">
-                    <label for="year-filter">Filtrar por ano:</label>
-                    <div class="select-wrapper">
-                        <select id="year-filter" class="filter-select">
-                            <option value="all">Todos os anos</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                            <option value="2020">2020</option>
-                            <option value="older">Anteriores a 2020</option>
-                        </select>
-                        <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
-                    </div>
+                <div class="filter-group">
+                    <label>Filtrar por ano:</label>
+                    <select id="year-filter">
+                        <option value="all">Todos os anos</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="older">Anteriores a 2020</option>
+                    </select>
                 </div>
-                <div class="filter-group animate-filter" style="animation-delay: 0.1s;">
-                    <label for="category-filter">Filtrar por categoria:</label>
-                    <div class="select-wrapper">
-                        <select id="category-filter" class="filter-select">
-                            <option value="all">Todas as categorias</option>
-                            <option value="articles">Artigos em periódicos</option>
-                            <option value="conferences">Trabalhos em congressos</option>
-                            <option value="books">Livros e capítulos</option>
-                            <option value="theses">Teses e dissertações</option>
-                        </select>
-                        <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
-                    </div>
+                <div class="filter-group">
+                    <label>Filtrar por categoria:</label>
+                    <select id="category-filter">
+                        <option value="all">Todas as categorias</option>
+                        <option value="articles">Artigos em periódicos</option>
+                        <option value="conferences">Trabalhos em congressos</option>
+                        <option value="books">Livros e capítulos</option>
+                        <option value="theses">Teses e dissertações</option>
+                    </select>
                 </div>
-                <div class="filter-group animate-filter" style="animation-delay: 0.2s;">
-                    <label for="author-filter">Filtrar por autor:</label>
-                    <div class="select-wrapper">
-                        <select id="author-filter" class="filter-select">
-                            <option value="all">Todos os autores</option>
-                            <option value="silva">Profa. Dra. Ana Silva</option>
-                            <option value="oliveira">Prof. Dr. Carlos Oliveira</option>
-                            <option value="santos">Profa. Dra. Mariana Santos</option>
-                            <option value="almeida">Prof. Dr. Ricardo Almeida</option>
-                        </select>
-                        <div class="select-arrow"><i class="fas fa-chevron-down"></i></div>
-                    </div>
+                <div class="filter-group">
+                    <label>Filtrar por autor:</label>
+                    <select id="author-filter">
+                        <option value="all">Todos os autores</option>
+                        <option value="silva">Profa. Dra. Ana Silva</option>
+                        <option value="oliveira">Prof. Dr. Carlos Oliveira</option>
+                        <option value="santos">Profa. Dra. Mariana Santos</option>
+                        <option value="almeida">Prof. Dr. Ricardo Almeida</option>
+                    </select>
                 </div>
-                <div class="filter-actions animate-filter" style="animation-delay: 0.3s;">
-                    <button id="apply-filters" class="btn btn-filter-primary">
-                        <i class="fas fa-search"></i> Aplicar
-                    </button>
-                    <button id="reset-filters" class="btn btn-filter-outline">
-                        <i class="fas fa-undo"></i> Limpar
-                    </button>
-                </div>
-            </div>
-            <div class="filter-tags" id="active-filters">
-                <!-- Tags de filtros ativos serão inseridas aqui via JavaScript -->
+                <button id="reset-filters" class="btn btn-outline">Limpar filtros</button>
             </div>
         </div>
     </section>
@@ -444,9 +430,4 @@
             <div class="container">
                 <p>&copy; 2025 Laboratório de Bromatologia - Faculdade de Farmácia UFMG. Todos os direitos reservados.</p>
                 <p>Desenvolvido por: Arthur Magno, Icaro Cardoso e Pâmela Eduarda - COLTEC UFMG</p>
-            </div>
-        </div>
-    </footer>
-    <script src="JS/main.js"></script>
-</body>
-</html>
+            </div
