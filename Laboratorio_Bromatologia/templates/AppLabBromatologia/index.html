@@ -1,0 +1,692 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de Bromatologia Unidade de Pesquisa Química de Alimentos - UFMG</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>broquimicadealimentos@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(31) 3409-6930</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Faculdade de Farmácia, UFMG - Belo Horizonte, MG</span>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    
+<!-- Botão de login/cadastro -->
+<div class="login-dropdown">
+    <a href="login.html" class="login-toggle"><i class="fas fa-user"></i><span>Área do Usuário</span></a>
+    <div class="dropdown-menu">
+        <a href="login.html">Entrar</a>
+        <a href="login.html#cadastro">Cadastrar</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="{% static 'imagens/lab-banner.jpg' % }" alt="Laboratório de Bromatologia UFMG">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li class="active"><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="projetos.html">Projetos e Pesquisas</a></li>
+                        <li><a href="publicacoes.html">Publicações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+                        /* Estilos específicos para a página de login/cadastro */
+                        .auth-section {
+                            padding: 80px 0;
+                            background-color: var(--light-gray);
+                            min-height: 600px;
+                        }
+                        
+                        .auth-container {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        
+                        .auth-box {
+                            background-color: var(--white);
+                            border-radius: 10px;
+                            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+                            width: 100%;
+                            max-width: 500px;
+                            padding: 0;
+                            overflow: hidden;
+                        }
+                        
+                        .auth-tabs {
+                            display: flex;
+                            background-color: var(--primary-color);
+                        }
+                        
+                        .auth-tab {
+                            flex: 1;
+                            text-align: center;
+                            padding: 15px;
+                            font-weight: 600;
+                            color: rgba(255, 255, 255, 0.7);
+                            cursor: pointer;
+                            transition: all 0.3s;
+                            position: relative;
+                        }
+                        
+                        .auth-tab:hover {
+                            color: var(--white);
+                        }
+                        
+                        .auth-tab.active {
+                            color: var(--white);
+                        }
+                        
+                        .auth-tab.active:after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 25%;
+                            width: 50%;
+                            height: 3px;
+                            background-color: var(--white);
+                        }
+                        
+                        .auth-content {
+                            padding: 40px;
+                        }
+                        
+                        .form-heading {
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
+                        
+                        .form-heading h2 {
+                            font-size: 28px;
+                            color: var(--primary-color);
+                            margin-bottom: 10px;
+                        }
+                        
+                        .form-heading p {
+                            color: var(--gray);
+                        }
+                        
+                        .auth-form {
+                            margin-bottom: 20px;
+                        }
+                        
+                        .form-group {
+                            margin-bottom: 20px;
+                        }
+                        
+                        .form-group label {
+                            display: block;
+                            margin-bottom: 8px;
+                            font-weight: 500;
+                        }
+                        
+                        .form-group input {
+                            width: 100%;
+                            padding: 12px 15px;
+                            border: 1px solid var(--border-color);
+                            border-radius: 5px;
+                            font-size: 16px;
+                            transition: all 0.3s;
+                        }
+                        
+                        .form-group input:focus {
+                            border-color: var(--primary-color);
+                            box-shadow: 0 0 10px rgba(26, 135, 84, 0.1);
+                        }
+                        
+                        .remember-forgot {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 20px;
+                        }
+                        
+                        .remember-me {
+                            display: flex;
+                            align-items: center;
+                        }
+                        
+                        .remember-me input {
+                            margin-right: 8px;
+                        }
+                        
+                        .forgot-password a {
+                            color: var(--primary-color);
+                            text-decoration: none;
+                        }
+                        
+                        .auth-btn {
+                            background-color: var(--primary-color);
+                            color: var(--white);
+                            border: none;
+                            width: 100%;
+                            padding: 14px;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            transition: all 0.3s;
+                        }
+                        
+                        .auth-btn:hover {
+                            background-color: var(--primary-dark);
+                        }
+                        
+                        .social-login {
+                            text-align: center;
+                            margin-top: 30px;
+                        }
+                        
+                        .social-login p {
+                            margin-bottom: 15px;
+                            position: relative;
+                        }
+                        
+                        .social-login p:before,
+                        .social-login p:after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            width: 30%;
+                            height: 1px;
+                            background-color: var(--border-color);
+                        }
+                        
+                        .social-login p:before {
+                            left: 0;
+                        }
+                        
+                        .social-login p:after {
+                            right: 0;
+                        }
+                        
+                        .social-buttons {
+                            display: flex;
+                            justify-content: center;
+                            gap: 15px;
+                        }
+                        
+                        .social-btn {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 18px;
+                            color: var(--white);
+                            transition: all 0.3s;
+                        }
+                        
+                        .facebook-btn {
+                            background-color: #3b5998;
+                        }
+                        
+                        .google-btn {
+                            background-color: #db4437;
+                        }
+                        
+                        .linkedin-btn {
+                            background-color: #0077b5;
+                        }
+                        
+                        .social-btn:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                        }
+                        
+                        .switch-form {
+                            text-align: center;
+                            margin-top: 20px;
+                        }
+                        
+                        .switch-form a {
+                            color: var(--primary-color);
+                            text-decoration: none;
+                            font-weight: 500;
+                        }
+                        
+                        .tab-content {
+                            display: none;
+                        }
+                        
+                        .tab-content.active {
+                            display: block;
+                        }
+                    </style>
+                </head>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide">
+                <div class="hero-bg" style="background-image: url('images/lab-hero.jpg');"></div>
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Laboratório de Bromatologia Unidade de Pesquisa Química de Alimentos</h1>
+                        <h2>Faculdade de Farmácia - UFMG</h2>
+                        <p>Excelência em pesquisa e análises na área de ciência e tecnologia de alimentos, contribuindo com o desenvolvimento de produtos mais nutritivos e seguros.</p>
+                        <div class="hero-buttons">
+                            <a href="contato.html" class="btn btn-primary">Entre em Contato</a>
+                            <a href="projetos.html" class="btn btn-outline">Conheça Nossos Projetos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Análises Bromatológicas</h3>
+                    <p>Realizamos análises físico-químicas e sensoriais de alimentos com equipamentos de última geração.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Pesquisa Científica</h3>
+                    <p>Desenvolvemos pesquisas nas áreas de ciência, tecnologia e segurança de alimentos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Formação Acadêmica</h3>
+                    <p>Capacitamos estudantes de graduação e pós-graduação para o mercado e a pesquisa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Parcerias com Indústrias</h3>
+                    <p>Colaboramos com empresas no desenvolvimento e aprimoramento de produtos alimentícios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="{% static 'imagens/lab-about.jpg' % }" alt="Laboratório de Bromatologia Unidade de Pesquisa Química de Alimentos">
+                </div>
+                <div class="about-text">
+                    <h2>Quem Somos</h2>
+                    <p>O Laboratório de Bromatologia Unidade de Pesquisa Química de Alimentos da Faculdade de Farmácia da UFMG foi fundado em 1978, com o objetivo de oferecer suporte analítico à pesquisa e ao ensino na área de ciências dos alimentos.</p>
+                    <p>Ao longo de mais de quatro décadas, temos formado centenas de profissionais capacitados e contribuído significativamente para o avanço científico e tecnológico na área de alimentos no Brasil.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="number">40+</span>
+                            <span class="text">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number">200+</span>
+                            <span class="text">Pesquisas Publicadas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="number">500+</span>
+                            <span class="text">Alunos Formados</span>
+                        </div>
+                    </div>
+                    <a href="sobre.html" class="btn btn-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos em Destaque</h2>
+                <p>Conheça alguns dos nossos principais projetos de pesquisa em desenvolvimento</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'imagens/project1.jpg' %}" alt="Projeto 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Alimentos Funcionais</h3>
+                        <p>Desenvolvimento de alimentos com propriedades funcionais utilizando ingredientes regionais do cerrado brasileiro.</p>
+                        <a href="projetos.html" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'imagens/project2.jpg' %}" alt="Projeto 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Controle de Qualidade</h3>
+                        <p>Métodos analíticos avançados para controle de qualidade e detecção de contaminantes em alimentos.</p>
+                        <a href="projetos.html" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{% static 'imagens/project3.jpg' %}" alt="Projeto 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sustentabilidade Alimentar</h3>
+                        <p>Aproveitamento integral de alimentos e redução de desperdícios na cadeia produtiva.</p>
+                        <a href="projetos.html" class="read-more">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="projetos.html" class="btn btn-primary">Ver Todos os Projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Equipe</h2>
+                <p>Conheça os professores e pesquisadores do Laboratório de Bromatologia</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="{% static 'imagens/team1.jpg' %}" alt="Profa. Ana Silva">
+                    </div>
+                    <div class="member-info">
+                        <h3>Profa. Dra. Ana Silva</h3>
+                        <p>Coordenadora do Laboratório</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="{% static 'imagens/team2.jpg' %}"alt="Prof. Carlos Oliveira">
+                    </div>
+                    <div class="member-info">
+                        <h3>Prof. Dr. Carlos Oliveira</h3>
+                        <p>Vice-Coordenador</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="{% static 'imagens/team3.jpg' %}" alt="Profa. Mariana Santos">
+                    </div>
+                    <div class="member-info">
+                        <h3>Profa. Dra. Mariana Santos</h3>
+                        <p>Coord. de Parcerias</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="{% static 'imagens/team4.jpg' %}" alt="Prof. Ricardo Almeida">
+                    </div>
+                    <div class="member-info">
+                        <h3>Prof. Dr. Ricardo Almeida</h3>
+                        <p>Coord. de Pesquisa</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fab fa-researchgate"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications-home">
+        <div class="container">
+            <div class="section-header">
+                <h2>Publicações Recentes</h2>
+                <p>Conheça nossas mais recentes contribuições científicas</p>
+            </div>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h3>Análise de compostos bioativos em frutas do cerrado brasileiro e sua aplicação em alimentos funcionais</h3>
+                        <p class="authors">Silva, A.; Oliveira, C.; Santos, M.; Almeida, R.</p>
+                        <p class="journal">Journal of Food Science and Technology, v.62, p.123-135</p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h3>Desenvolvimento de método analítico para detecção de contaminantes emergentes em produtos lácteos</h3>
+                        <p class="authors">Almeida, R.; Ferreira, J.; Silva, A.</p>
+                        <p class="journal">Food Analytical Methods, v.17, p.89-101</p>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h3>Avaliação sensorial e nutricional de produtos elaborados com aproveitamento integral de frutas e hortaliças</h3>
+                        <p class="authors">Santos, M.; Silva, A.; Oliveira, C.</p>
+                        <p class="journal">Food Research International, v.159, p.245-257</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="publicacoes.html" class="btn btn-primary">Ver Todas as Publicações</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="{% static 'imagens/lab-banner.jpg' %}" alt="Laboratório de Bromatologia Unidade de Pesquisa Química de Alimentos UFMG">
+                        </div>
+                        <p>O Laboratório de Bromatologia Unidade de Pesquisa Química de Alimentos da Faculdade de Farmácia da UFMG é referência em pesquisa e análises na área de ciência e tecnologia de alimentos.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Links Rápidos</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="projetos.html">Projetos e Pesquisas</a></li>
+                            <li><a href="publicacoes.html">Publicações</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Links Úteis</h3>
+                        <ul class="footer-links">
+                            <li><a href="https://www.ufmg.br" target="_blank">UFMG</a></li>
+                            <li><a href="https://www.farmacia.ufmg.br" target="_blank">Faculdade de Farmácia</a></li>
+                            <li><a href="#">Portal do Aluno</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Área Restrita</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Boletim Informativo</h3>
+                        <p>Inscreva-se para receber atualizações sobre nossas pesquisas e eventos.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu e-mail" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Laboratório de Bromatologia Unidade de Pesquisa Química de Alimentos - Faculdade de Farmácia UFMG. Todos os direitos reservados.</p>
+                <p>Desenvolvido por: Arthur Magno, Icaro Cardoso e Pâmela Eduarda - COLTEC UFMG</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Adicione isso ao final do seu arquivo HTML para habilitar os efeitos de scroll -->
+    <script src="{% static 'js/main.js' %}"></script>
+   
+    <!-- Adicione CSS específico para a seção de contato da página inicial -->
+    <style>
+        /* Estilo para o CTA de Contato */
+        .contact-cta {
+            background-image: url("{ % static 'imagens/contact-bg.jpg' % }");
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            position: relative;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .contact-cta:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 135, 84, 0.85);
+            z-index: 1;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .cta-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-content .btn {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .cta-content .btn:hover {
+            background-color: var(--light-gray);
+            color: var(--primary-dark);
+        }
+        
+        /* Estilo para seção de publicações na página inicial */
+        .publications-home {
+            background-color: var(--light-gray);
+        }
+        
+        .publications-home .publications-list {
+            max-width: 900px;
+            margin: 0 auto 50px;
+        }
+        
+        /* Hero Section com imagem de fundo */
+        .hero {
+            position: relative;
+            height: 700px;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: -1;
+        }
+    </style>
+</body>
+</html>
